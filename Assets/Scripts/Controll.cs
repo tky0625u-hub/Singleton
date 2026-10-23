@@ -3,8 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Controll : MonoBehaviour
 {
-    [SerializeField] private string[] SceneNames;
-    private int scene = 1;
+    [SerializeField] private AudioClip se;
+    [SerializeField] private AudioClip bgm;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,9 +19,24 @@ public class Controll : MonoBehaviour
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            GamaSceneManager.Instance.ChangeScene(SceneNames[scene]);
-            scene += 1;
-            if (scene >= SceneNames.Length) scene = 0;
+            SoundManager.Instance.PlayBGM(bgm, 0.5f);
+        }
+
+        if (Keyboard.current.upArrowKey.wasPressedThisFrame)
+        {
+            GamaSceneManager.Instance.ChangeScene("Title");
+        }
+        if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
+        {
+            GamaSceneManager.Instance.ChangeScene("Stage1");
+        }
+        if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
+        {
+            GamaSceneManager.Instance.ChangeScene("Stage2");
+        }
+        if (Keyboard.current.downArrowKey.wasPressedThisFrame)
+        {
+            SoundManager.Instance.PlaySE(se, 0.5f);
         }
     }
 }

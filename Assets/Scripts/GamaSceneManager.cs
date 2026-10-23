@@ -31,6 +31,12 @@ public class GamaSceneManager : MonoBehaviour
             Debug.Log("登録されていないシーンです。"); 
             return;
         }
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_scene))
+        {
+            Debug.Log("現在のシーンです。");
+            return;
+        }
         SceneManager.LoadScene(_scene);
+        Debug.Log($"{_scene}");
     }
 }

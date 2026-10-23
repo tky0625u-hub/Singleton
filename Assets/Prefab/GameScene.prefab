@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1323234113389162091}
   - component: {fileID: 8649099925337448700}
-  - component: {fileID: 6785860617859914719}
   m_Layer: 0
   m_Name: GameScene
   m_TagString: Untagged
@@ -45,22 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25b45fd0b632f042a258a229c79096f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GamaSceneManager
-  SceneNames:
-  - Title
-  - Stage1
-  - Stage2
---- !u!114 &6785860617859914719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7694465046395611736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d8c4ec78e14a2438ad6fd8471f569a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Controll
   SceneNames:
   - Title
   - Stage1
